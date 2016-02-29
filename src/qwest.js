@@ -1,4 +1,4 @@
-/*! qwest 4.1.0 (https://github.com/pyrsmk/qwest) */
+/*! qwest 4.1.1 (https://github.com/pyrsmk/qwest) */
 
 module.exports = function() {
 
@@ -14,10 +14,10 @@ module.exports = function() {
 		requests = 0,
 		request_stack = [],
 		// Get XMLHttpRequest object
-		getXHR = function(){
-			return global.XMLHttpRequest?
-					new global.XMLHttpRequest():
-					new ActiveXObject('Microsoft.XMLHTTP');
+		getXHR = global.XMLHttpRequest? function(){
+			return new global.XMLHttpRequest();
+		}: function(){
+			return new ActiveXObject('Microsoft.XMLHTTP');
 		},
 		// Guess XHR version
 		xhr2 = (getXHR().responseType===''),

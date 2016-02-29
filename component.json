@@ -1,0 +1,13 @@
+{
+    "name": "qwest",
+    "description": "Ajax library with XHR2, promises and request limit",
+    "repos": "https://github.com/pyrsmk/qwest.git",
+    "main": "src/qwest.js",
+    "tag": "master",
+    "reposType": "npm",
+    "dependencies": {
+        "jquery-param": "^0.1.2",
+        "pinkyswear": "^2.2.2"
+    },
+    "version": "4.0.0"
+}

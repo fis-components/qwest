@@ -1,4 +1,4 @@
-/*! qwest 4.0.0 (https://github.com/pyrsmk/qwest) */
+/*! qwest 4.1.0 (https://github.com/pyrsmk/qwest) */
 
 module.exports = function() {
 
@@ -433,6 +433,9 @@ module.exports = function() {
 			setDefaultDataType: function(type) {
 				defaultDataType = type.toLowerCase();
 				return q;
+			},
+			getOpenRequests: function() {
+				return requests;
 			}
 		};
 	
